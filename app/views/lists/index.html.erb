@@ -1,2 +1,17 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<h1>To Do LIST</h1>
+
+<%= link_to 'Inserir Lista', new_list_path %>
+
+<ul>
+  <% if @lists.any? %>
+    <% @lists.each do |list| %>
+      <li>
+        <%= link_to list.name, list_path(list) %>
+        <%= link_to 'Editar', edit_list_path(list) %> |
+        <%= link_to 'Excluir', list_path(list), method: :delete, data: { confirm: "Tem certeza?" } %>
+      </li>
+    <% end %>
+  <% else %>
+    <p> A lista está vazia</p>
+  <% end %>
+</ul>
