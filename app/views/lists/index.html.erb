@@ -8,7 +8,7 @@
       <li>
         <%= link_to list.name, list_path(list) %>
         <%= link_to 'Editar', edit_list_path(list) %> |
-        <%= link_to 'Excluir', list_path(list), method: :delete, data: { confirm: "Tem certeza?" } %>
+        <%= link_to 'Excluir', list_path(list), method: :delete, data: { confirm: "Tem certeza que deseja excluir?" } %>
       </li>
     <% end %>
   <% else %>

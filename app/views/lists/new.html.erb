@@ -1,2 +1,7 @@
-<h1>Lists#new</h1>
-<p>Find me in app/views/lists/new.html.erb</p>
+<h1>Nova Lista</h1>
+
+<%= form_with model: @list, local: true do |form| %>
+  <%= form.label :name, "Nome da Lista" %>
+  <%= form.text_field :name %>
+  <%= form.submit "Criar Lista" %>
+<% end %>
