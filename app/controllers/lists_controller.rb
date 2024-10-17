@@ -42,9 +42,11 @@ class ListsController < ApplicationController
 
   # Responsável por destruir a lista
   def destroy
-    @list = List.find(params[:id]) 
-    @list.destroy
-    redirect_to lists_path, notice: "Lista deletada com sucesso!"
+    if @list.destroy
+      redirect_to lists_path, notice: "Lista deletada com sucesso !!!!"
+    else 
+      redirect_to lists_path
+    end
   end
 
   # Funçoes privadas 
