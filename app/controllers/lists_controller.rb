@@ -34,9 +34,8 @@ class ListsController < ApplicationController
   # Responsável por editar a lista
   def update
     if @list.update(list_params)
-      redirect_to list_path(@list), notice: "Lista editada com sucesso !!!!"
+      redirect_to edit_list_path(@list), notice: "Lista editada com sucesso !!!!"
     else 
-      @item = Item.new # adicionar novas tarefas (opcional)
       render :edit
     end
   end

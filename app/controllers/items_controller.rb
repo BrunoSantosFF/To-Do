@@ -15,8 +15,12 @@ class ItemsController < ApplicationController
   # Atualizar o item na lista
   def update
     @item = @list.items.find(params[:id])
-    @item.update(item_params)
-    redirect_to list_path(@list)
+    if @item.update(item_params)
+      redirect_to edit_list_path(@list), notice: "Atualizando o item da lista "
+    else 
+      render 'lists/edit'
+    end
+    
   end
 
   # Destruir o item da lista
