@@ -36,6 +36,7 @@ class ListsController < ApplicationController
     if @list.update(list_params)
       redirect_to list_path(@list), notice: "Lista editada com sucesso !!!!"
     else 
+      @item = Item.new # adicionar novas tarefas (opcional)
       render :edit
     end
   end
@@ -59,7 +60,7 @@ class ListsController < ApplicationController
 
   # Responsável por filtrar os parâmetros que estão sendo enviados
   def list_params
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, items_attributes: [:title, :completed])
   end
 
 end
