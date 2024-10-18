@@ -5,7 +5,6 @@
   <% @list.items.each do |item| %>
     <li>
       <%= item.title %> - <%= item.completed ? "Concluído" : "Pendente" %>
-      <%= link_to 'Remover', list_item_path(@list, item), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir?' } %>
     </li>
   <% end %>
 </ul>
@@ -16,3 +15,5 @@
   <%= form.text_field :title %>
   <%= form.submit "Adicionar" %>
 <% end %>
+
+<%= link_to 'Voltar', lists_path %>

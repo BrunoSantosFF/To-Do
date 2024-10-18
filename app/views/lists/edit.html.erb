@@ -15,18 +15,6 @@
 
 <%= render partial: "items/form", locals: { items: @list.items } %>
 
-<%= link_to 'Concluido', lists_path %>
-
-<h2>Adicionar Nova Tarefa</h2>
-
-<%= form_with(model: [@list, Item.new], local: true) do |form| %>
-  <div>
-    <%= form.label :title, "Nome da Tarefa" %>
-    <%= form.text_field :title %>
-  </div>
-  <div>
-    <%= form.submit "Criar Tarefa" %>
-  </div>
-<% end %>
-
+<%= link_to 'Concluido', lists_path %> 
 <%= link_to 'Voltar', lists_path %>
+

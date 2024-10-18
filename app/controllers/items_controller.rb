@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   def create
     @item = @list.items.build(item_params)
     if @item.save
-      redirect_to list_path(@list), notice: "Item adicionado "
+      redirect_to list_path(@list), notice: "Item adicionado !!!!"
     else 
       render 'lists/show'
     end
@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
   def update
     @item = @list.items.find(params[:id])
     if @item.update(item_params)
-      redirect_to edit_list_path(@list), notice: "Atualizando o item da lista "
+      redirect_to edit_list_path(@list), notice: "Atualizando o item da lista !!!!"
     else 
       render 'lists/edit'
     end
@@ -26,8 +26,12 @@ class ItemsController < ApplicationController
   # Destruir o item da lista
   def destroy
     @item = @list.items.find(params[:id])
-    @item.destroy
-    redirect_to list_path(@list)
+    if  @item.destroy
+      redirect_to edit_list_path(@list), notice: "Destruindo o item da lista !!!!"
+    else 
+      render 'lists/edit'
+    end
+   
   end
 
   # Funções privadas 
