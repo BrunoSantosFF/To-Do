@@ -14,7 +14,7 @@
           </div>
           <div class="right">
               <%= link_to image_tag('clip.svg', alt: 'Editar',width: '20', height: '20'), edit_list_path(list),class: "button button_editar" %> |
-              <%= link_to image_tag('delete.svg', alt: 'Deletar',width: '20', height: '20'), list_path(list), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir?' },class: "button button_editar fade-out " %>
+              <%= link_to image_tag('delete.svg', alt: 'Deletar',width: '20', height: '20'), list_path(list), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir?' },class: "button button_editar " %>
           </div>
         </li>
       <% end %>
