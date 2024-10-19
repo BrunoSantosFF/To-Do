@@ -1,7 +1,7 @@
 <div class="container_main">
 
   <div class="header">
-    <h1>To Do LIST</h1>
+    <h1>To Do List</h1>
   </div>
 
 
@@ -9,9 +9,9 @@
     <% if @lists.any? %>
       <% @lists.each do |list| %>
         <li>
-          <%= link_to list.name, list_path(list) %>
-          <%= link_to 'Editar', edit_list_path(list) %> |
-          <%= link_to 'Excluir', list_path(list), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir?' } %>
+          <%= link_to list.name, list_path(list),class: 'text' %>
+          <%= link_to image_tag('clip.svg', alt: 'Editar',width: '20', height: '20'), edit_list_path(list),class: "button button_editar" %> |
+          <%= link_to image_tag('delete.svg', alt: 'Deletar',width: '20', height: '20'), list_path(list), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir?' },class: "button button_editar" %>
 
         </li>
       <% end %>
@@ -20,8 +20,6 @@
     <% end %>
   </ul>
 
-  <%= image_tag 'pen.svg', alt: 'Descrição da imagem' %>
-
-  <%= link_to 'Inserir Lista', new_list_path,class: "button" %>
+  <%= link_to image_tag('pen.svg', alt: 'Inserir Lista',width: '20', height: '20'), new_list_path,class: "button button_criar" %>
 
 </div>

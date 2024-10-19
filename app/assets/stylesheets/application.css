@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Love+Light&family=Roboto+Mono:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Londrina+Solid:wght@100;300;400;900&family=Love+Light&family=Roboto+Mono:wght@100;400&display=swap');
+
 html, body {
   height: 100%; 
   margin: 0;
@@ -6,7 +9,8 @@ html, body {
   align-items: center;
 }
 body {
-  background: rgb(180, 165, 165);
+  
+  background: rgb(211, 200, 200);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,36 +28,72 @@ body {
   padding: 20px; 
   text-align: center; 
   border: 3px solid;
-  
+  background-size: cover;
+  position: relative;
+}
+
+/* Estilo do texto*/
+.text {
+  font-family: "Love Light", cursive;
+  font-size: 30px;
 }
 
 /* CSS do button*/
 .button {
   display: inline-block;
   padding: 15px 25px;
-  font-size: 24px;
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #04AA6D;
+  background-color: #bac9c4;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
+ 
+}
+
+.button_editar {
+  transform: translateX(-50%); 
+}
+
+.button_criar {
+  position: absolute; 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
 }
 
 .button:hover {
-  background-color: #3e8e41
+  background-color: #f6e6e6
 }
 
 .button:active {
-  background-color: #3e8e41;
+  background-color: #ffffff;
   box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  transform: translateX(-50%) translateY(4px);
 }
 
 /* ===========  Cabeçalho =========== */
 .header {
   border: 2px solid;
+  font-family: "Londrina Solid", sans-serif;
+  font-size: 20px;
+}
+
+/* ===========  Itens da lista =========== */
+
+/* Remove margens e padding da lista */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estiliza os itens da lista */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  user-select: none; 
+  list-style-type: none;
 }
