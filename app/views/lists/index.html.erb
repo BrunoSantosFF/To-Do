@@ -5,14 +5,17 @@
   </div>
 
 
-  <ul>
+  <ul class="scrollable-list">
     <% if @lists.any? %>
       <% @lists.each do |list| %>
-        <li>
-          <%= link_to list.name, list_path(list),class: 'text' %>
-          <%= link_to image_tag('clip.svg', alt: 'Editar',width: '20', height: '20'), edit_list_path(list),class: "button button_editar" %> |
-          <%= link_to image_tag('delete.svg', alt: 'Deletar',width: '20', height: '20'), list_path(list), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir?' },class: "button button_editar" %>
-
+        <li class="list-item">
+          <div class="left list-text">
+              <%= link_to list.name, list_path(list),class: 'text link' %>
+          </div>
+          <div class="right">
+              <%= link_to image_tag('clip.svg', alt: 'Editar',width: '20', height: '20'), edit_list_path(list),class: "button button_editar" %> |
+              <%= link_to image_tag('delete.svg', alt: 'Deletar',width: '20', height: '20'), list_path(list), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir?' },class: "button button_editar fade-out " %>
+          </div>
         </li>
       <% end %>
     <% else %>
