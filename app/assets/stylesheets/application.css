@@ -41,7 +41,7 @@ body {
 /* CSS do button*/
 .button {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 10px 20px;
   cursor: pointer;
   background-color: #bac9c4;
   border: none;
@@ -51,7 +51,9 @@ body {
 }
 
 .button_editar {
+
   transform: translateX(-50%); 
+  right: 2px;
 }
 
 .button_criar {
@@ -88,7 +90,6 @@ ul {
 
 /* Estiliza os itens da lista */
 ul li {
-  cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
   background: #eee;
