@@ -1,11 +1,12 @@
 html, body {
   height: 100%; 
-  width: 100%; 
   margin: 0;
-  padding: 0; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
 }
 body {
-  background-image: url('/assets/fundo_space.jpg'); 
+  background: rgb(180, 165, 165);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,13 +14,17 @@ body {
 
 /* Container principal do to do */
 .container_main {
+  background-image: url('/assets/papel.jpg'); 
   max-width: 600px; 
   max-height: 800px;
   margin-top: 40px;
+  width: 400px;
+  height: 500px;
   margin: 0 auto; 
   padding: 20px; 
   text-align: center; 
   border: 3px solid;
+  
 }
 
 /* CSS do button*/
