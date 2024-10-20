@@ -1,0 +1,30 @@
+.form-group {
+  margin-bottom: 20px; /* Espaçamento abaixo do grupo de campos */
+  margin-top: 20px;
+}
+
+.button-group {
+  display: flex; /* Usando Flexbox para os botões */
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+.text-field {
+  margin-left: 10px; /* Espaçamento à esquerda do campo de texto */
+}
+
+.submit-button {
+  background-color: #4CAF50; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove a borda padrão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  cursor: pointer; /* Cursor do mouse ao passar sobre o botão */
+}
+
+.back-link {
+  padding: 10px 20px; /* Espaçamento interno do link */
+  text-decoration: none; /* Remove o sublinhado do link */
+  background-color: #f44336; /* Cor de fundo do link */
+  color: white; /* Cor do texto do link */
+  border: none; /* Remove a borda padrão */
+  cursor: pointer; /* Cursor do mouse ao passar sobre o link */
+}
