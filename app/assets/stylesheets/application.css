@@ -52,7 +52,6 @@ body {
 }
 
 .button_editar {
-
   transform: translateX(-50%); 
   right: 2px;
 }
