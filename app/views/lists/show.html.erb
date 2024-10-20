@@ -6,10 +6,14 @@
 
   <h2 class="header" style="border: none; font-size: 20px;">ITENS:</h2>
   <ul class="scrollable-list" style="max-height: 200px;">
-    <% @list.items.reverse.each do |item| %>
-      <li>
-        <%= item.title %> - <%= item.completed ? "Concluído" : "Pendente" %>
-      </li>
+    <% if @list.items.any? %>
+      <% @list.items.reverse.each do |item| %>
+        <li>
+          <%= item.title %> - <%= item.completed ? "Concluído" : "Pendente" %>
+        </li>
+      <% end %>
+    <% else %>
+      <p> A lista está vazia</p>
     <% end %>
   </ul>
 
