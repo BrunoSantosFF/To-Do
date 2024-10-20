@@ -9,7 +9,7 @@
     <% if @list.items.any? %>
       <% @list.items.reverse.each do |item| %>
         <li>
-          <%= item.title %> - <%= item.completed ? "Concluído" : "Pendente" %>
+          <%= item.title %> - <%= item.completed ? "Concluído ✅" : "Pendente ⏳" %>
         </li>
       <% end %>
     <% else %>

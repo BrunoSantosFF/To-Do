@@ -1,6 +1,8 @@
+/*============= Fontes utilizadas ==================== */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Love+Light&family=Roboto+Mono:wght@100;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Londrina+Solid:wght@100;300;400;900&family=Love+Light&family=Roboto+Mono:wght@100;400&display=swap');
 
+/*============= Corpo da página  ==================== */
 html, body {
   height: 100%; 
   margin: 0;
@@ -8,6 +10,7 @@ html, body {
   justify-content: center; 
   align-items: center;
 }
+
 body {
   
   background: rgb(211, 200, 200);
@@ -16,6 +19,7 @@ body {
   background-repeat: no-repeat;
 }
 
+/*======================= Containers ultilizados ================== */
 /* Container principal do to do */
 .container_main {
   background-image: url('/assets/papel.jpg'); 
@@ -93,7 +97,7 @@ ul {
 ul li {
   position: relative;
   padding: 12px 8px 12px 40px;
-  background: #bdb3b3;
+  background: #fbe4e4;
   font-size: 18px;
   transition: 0.2s;
   user-select: none; 
@@ -101,7 +105,12 @@ ul li {
 }
 
 ul li:nth-child(odd) {
-  background: #f9f9f9;
+  background: #d1cfcf;
+}
+
+/* Cor de fundo mais escura ao passar o mouse */
+ul li:hover {
+  background: #8f8f8f;
 }
 
 .list-item {
@@ -129,6 +138,7 @@ ul li:nth-child(odd) {
   max-width: 250px;
 }
 
+/* Barra rolante do formulário */
 .scrollable-list {
   max-height: 300px; 
   overflow-y: auto;
@@ -145,7 +155,7 @@ ul li:nth-child(odd) {
   text-decoration: none;
 }
 
-
+/* indice do número da página */
 .bottom-right-text {
   position: absolute;
   bottom: 0; 

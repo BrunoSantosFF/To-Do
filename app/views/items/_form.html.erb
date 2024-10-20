@@ -12,7 +12,7 @@
             </h2>
             <%= item_form.text_field :title, class: "text-field" %>
             <%= item_form.check_box :completed, style: "width: 30px; height: 20px;" %>
-            <div id="error-message" style="color: red; display: none;">
+            <div id="error-message">
               O campo de título não pode estar vazio!
             </div>
           </div>
@@ -32,6 +32,8 @@
     <p>A lista está vazia</p>
   <% end %>
 </div>
+
+
 <script>
   document.addEventListener('turbo:load', () => {
     const forms = document.querySelectorAll('form');
@@ -42,14 +44,13 @@
         const errorMessage = form.querySelector('#error-message');
 
         if (!titleField.value.trim()) {
-          event.preventDefault(); // Impede o envio do formulário
-          errorMessage.style.display = 'block'; // Mostra a mensagem de erro
-          errorMessage.textContent = 'O campo de título não pode estar vazio!';
+          event.preventDefault(); 
+          errorMessage.style.display = 'block'; 
           setTimeout(() => {
             errorMessage.style.display = "none"; 
           }, 1000);
         } else {
-          errorMessage.style.display = 'none'; // Esconde a mensagem de erro se não estiver vazio
+          errorMessage.style.display = 'none'; 
         }
       });
     });

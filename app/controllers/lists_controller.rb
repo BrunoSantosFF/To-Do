@@ -27,7 +27,7 @@ class ListsController < ApplicationController
     end
   end
 
-  # Página de editar
+  # Função da página de editar
   def edit
   end
 
