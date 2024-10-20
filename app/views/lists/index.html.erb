@@ -7,7 +7,7 @@
 
   <ul class="scrollable-list">
     <% if @lists.any? %>
-      <% @lists.each do |list| %>
+      <% @lists.reverse.each do |list| %>
         <li class="list-item">
           <div class="left list-text">
               <%= link_to list.name, list_path(list),class: 'text link' %>
