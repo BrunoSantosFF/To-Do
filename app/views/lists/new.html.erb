@@ -29,3 +29,23 @@
     <% end %>
 </div>
 
+<script>
+  function validateForm(form) {
+    const nameInput = form.querySelector("input[name='list[name]']");
+    const errorMessage = document.getElementById("error-message");
+    const trimmedValue = nameInput.value.trim();
+
+    if (trimmedValue === "") {
+      errorMessage.style.display = "block"; 
+       setTimeout(() => {
+        errorMessage.style.display = "none"; 
+      }, 1000);
+      return false;
+
+    } else {
+      errorMessage.style.display = "none"; 
+    }
+    
+    return true;
+  }
+</script>
