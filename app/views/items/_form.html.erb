@@ -1,19 +1,26 @@
-<% items.each do |item| %>
-  <div class="item">
-    <h3>Tarefa: <%= item.title %></h3>
-    <%= form_with(model: [@list, item], local: true) do |item_form| %>
-      <div>
-        <%= item_form.label :title, "Nome da Tarefa" %>
-        <%= item_form.text_field :title %>
-      </div>
-      <div>
-        <%= item_form.label :completed, "Concluída?" %>
-        <%= item_form.check_box :completed %>
-      </div>
-      <div>
-        <%= item_form.submit "Salvar Tarefa" %>
-        <%= link_to 'Excluir Tarefa', list_item_path(@list, item), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir?' } %>
+<div class='scrollable-list'>
+  <% if items.any? %>
+    <% items.reverse.each do |item| %>
+      <div >
+        <h3>Tarefa: <%= item.title %></h3>
+        <%= form_with(model: [@list, item], local: true) do |item_form| %>
+          <div>
+            <%= item_form.label :title, "Nome da Tarefa" %>
+            <%= item_form.text_field :title %>
+          </div>
+          <div>
+            <%= item_form.label :completed, "Concluída?" %>
+            <%= item_form.check_box :completed %>
+          </div>
+          <div>
+            <%= item_form.submit "Salvar Tarefa" %>
+            <%= link_to 'Excluir Tarefa', list_item_path(@list, item), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir?' } %>
+          </div>
+        <% end %>
       </div>
     <% end %>
-  </div>
-<% end %>
+  <% else %>
+    <p> A lista está vazia</p>
+  <% end %>
+
+</div>
