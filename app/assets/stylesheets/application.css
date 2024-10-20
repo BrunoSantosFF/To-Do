@@ -125,7 +125,7 @@ ul li:nth-child(odd) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 100px;
+  max-width: 250px;
 }
 
 .scrollable-list {
