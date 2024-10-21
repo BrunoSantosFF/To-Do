@@ -25,3 +25,28 @@ Criação dos controllers List e Item:
 ```
 rails g controller Lists index show new create edit update destroy && rails g controller Items create update destroy
 ```
+
+//=================================
+# Autentificação e Usuário
+
+Fazendo uma tela para usuarios com autitificação (Devise)
+
+Adicione a gem devise ao seu Gemfile:
+```
+gem 'devise'
+```
+Instale a gem:
+
+```
+bundle install
+```
+Gere as configurações básicas do Devise:
+```
+rails generate devise:install
+```
+Criando o modelo User:
+```
+rails generate devise User
+rails db:migrate
+
+```
