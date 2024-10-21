@@ -1,0 +1,16 @@
+.container {
+  background: #27a787;
+  max-width: 600px; 
+  max-height: 800px;
+  margin-top: 40px;
+  width: 300px;
+  height: 450px;
+  margin: 0 auto; 
+  padding: 20px; 
+  text-align: center; 
+  border: 3px solid;
+  background-size: cover;
+  position: relative;
+  box-shadow: 10px 15px;
+  font-family: "Londrina Solid", sans-serif;
+}
