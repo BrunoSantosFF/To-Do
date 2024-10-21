@@ -50,3 +50,13 @@ rails generate devise User
 rails db:migrate
 
 ```
+Criando uma referencia do usuario com a lista do todo no DB:
+```
+rails generate migration AddUserToLists user:references
+```
+
+Criando as views do Usuário: 
+```
+rails generate devise:views
+
+```

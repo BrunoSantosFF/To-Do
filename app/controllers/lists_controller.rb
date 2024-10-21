@@ -1,10 +1,12 @@
 class ListsController < ApplicationController
+  # Somente usuaários podem acessar as funções
+  before_action :authenticate_user!
   # Callback para chamar a função antes das outras
   before_action :set_list, only: [:show, :edit, :update, :destroy]
 
-  # Função para chamar todas as listas do banco de dados
+  # Função para chamar todas as listas do banco de dados que pertence ao usuário
   def index
-    @lists = List.all
+    @lists = current_user.lists
   end
 
   # Função para mostrar os itens na pagina de Show 
@@ -17,9 +19,9 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
-  # Função que cria a lista através dos parametros
+  # Função que cria a lista através dos parametros e associa ao usuário logado
   def create
-    @list = List.new(list_params)
+    @list = current_user.lists.build(list_params)
     if @list.save
       redirect_to lists_path, notice: "Lista criada com sucesso !!!!!"
     else
@@ -52,9 +54,12 @@ class ListsController < ApplicationController
   # Funçoes privadas 
   private
 
-  # Encontrando o item pelo id nos parametros
+  # Encontrando a lista do usuário logado pelo id nos parâmetros
   def set_list
-    @list = List.find(params[:id]) 
+    @list = current_user.lists.find(params[:id])
+  # Tratando exeção de não encontrar a lista do usuário
+  rescue ActiveRecord::RecordNotFound
+    redirect_to lists_path, alert: "Lista não encontrada"
   end
 
   # Responsável por filtrar os parâmetros que estão sendo enviados
