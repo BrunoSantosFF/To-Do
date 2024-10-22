@@ -9,8 +9,33 @@
   padding: 20px; 
   text-align: center; 
   border: 3px solid;
+  border-radius: 5px;
   background-size: cover;
   position: relative;
   box-shadow: 10px 15px;
   font-family: "Londrina Solid", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field{
+  margin: 10px;
+}
+
+.custom-input{
+  border-radius: 5px;
+  width: 200px;
+  height: 20px;
+}
+
+.custom-button {
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.custom-button:hover {
+  background: rgb(214, 194, 194);
 }
