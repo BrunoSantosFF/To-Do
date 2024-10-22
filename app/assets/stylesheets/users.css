@@ -31,8 +31,8 @@
 }
 
 .custom-button {
-  width: 80px;
   height: 30px;
+  max-width: 250px; 
   border-radius: 5px;
 }
 
