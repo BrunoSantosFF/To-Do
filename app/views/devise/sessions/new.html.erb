@@ -1,8 +1,7 @@
 <%= stylesheet_link_tag 'users', media: 'all' %>
 
 <div class="container">
-  <h2>REGISTRAR</h2>
-
+  <h2>LOG IN</h2>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
       <%= f.label :email %><br />
@@ -10,19 +9,19 @@
     </div>
 
     <div class="field">
-      <%= f.label 'Senha' %><br />
+      <%= f.label 'Password' %><br />
       <%= f.password_field :password, autocomplete: "current-password", class: "custom-input" %>
     </div>
 
     <% if devise_mapping.rememberable? %>
       <div class="field">
         <%= f.check_box :remember_me %>
-        <%= f.label 'Lembrar senha' %>
+        <%= f.label 'Remember password' %>
       </div>
     <% end %>
 
     <div class="actions">
-      <%= f.submit "Registrar", class: "custom-button" %>
+      <%= f.submit "Log in", class: "custom-button" %>
     </div>
   <% end %>
 
