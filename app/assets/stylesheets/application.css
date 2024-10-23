@@ -56,12 +56,12 @@ body {
   font-family: "Londrina Solid", sans-serif;
 }
 
-.button_editar {
+.button_edit {
   transform: translateX(-50%); 
   right: 2px;
 }
 
-.button_criar {
+.button_create {
   position: absolute; 
   bottom: 20px; 
   left: 50%; 

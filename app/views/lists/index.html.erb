@@ -13,8 +13,8 @@
               <%= link_to list.name, list_path(list),class: 'text link' %>
           </div>
           <div class="right">
-              <%= link_to image_tag('clip.svg', alt: 'Editar',width: '20', height: '20'), edit_list_path(list),class: "button button_editar" %> |
-              <%= link_to image_tag('delete.svg', alt: 'Deletar',width: '20', height: '20'), list_path(list), data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja excluir?' },class: "button button_editar " %>
+              <%= link_to image_tag('clip.svg', alt: 'Edit',width: '20', height: '20'), edit_list_path(list),class: "button button_edit" %> |
+              <%= link_to image_tag('delete.svg', alt: 'Delete',width: '20', height: '20'), list_path(list), data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete?' },class: "button button_edit " %>
           </div>
         </li>
       <% end %>
@@ -23,7 +23,7 @@
     <% end %>
   </ul>
 
-  <%= link_to "#{image_tag('pen.svg', alt: 'Inserir Lista',width: '20', height: '20')} Inserir Lista".html_safe, new_list_path,class: "button button_criar link" %>
+  <%= link_to "#{image_tag('pen.svg', alt: 'Insert List',width: '20', height: '20')} Insert List".html_safe, new_list_path,class: "button button_create link" %>
 
   <% if user_signed_in? %>
    <%= link_to "Log out", destroy_user_session_path, data: { "turbo-method": :delete } %>

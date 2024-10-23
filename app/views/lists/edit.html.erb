@@ -2,32 +2,32 @@
 
 <div class='container_main'>
   <div class="header">
-    <h1>Editar Lista</h1>
+    <h1>Edit List</h1>
   </div>
 
   <%= form_with(model: @list, local: true,html: { onsubmit: "return validateForm(this);" }) do |form| %>
     <div class="form-group">
-      <%= form.label :name, "Lista: " ,style: "font-weight: bold; color: #333; font-size: 30px;"%>
+      <%= form.label :name, "List: " ,style: "font-weight: bold; color: #333; font-size: 30px;"%>
       <%= form.text_field :name, class: "text-field" %>
 
       <%= button_tag(type: 'submit', class: "button") do %>
-        <%= image_tag('check.png', alt: 'Atualizar Lista', width: '20', height: '20') %>
-        Atualizar
+        <%= image_tag('check.png', alt: 'Update list', width: '20', height: '20') %>
+        Update
       <% end %>
 
       <div id="error-message" >
-        O nome da lista não pode estar vazio!
+        The list name cannot be empty!
       </div>
 
     </div>
   <% end %>
 
-  <h2 class='header'>TAREFAS</h2>
+  <h2 class='header'>TASK</h2>
 
   <%= render partial: "items/form", locals: { items: @list.items }%>
 
-  <%= link_to "#{image_tag('check.png', alt: 'Concluido', width: '20', height: '20')} Concluido".html_safe, lists_path, class: "button link" %>
-  <%= link_to "#{image_tag('voltar.png', alt: 'Voltar', width: '20', height: '20')} Voltar".html_safe, lists_path, class: "button link" %>
+  <%= link_to "#{image_tag('check.png', alt: 'Completed', width: '20', height: '20')} Completed".html_safe, lists_path, class: "button link" %>
+  <%= link_to "#{image_tag('voltar.png', alt: 'Voltar', width: '20', height: '20')} Back".html_safe, lists_path, class: "button link" %>
 
   <footer>
     <span class="bottom-right-text ">3</span>

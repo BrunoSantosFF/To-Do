@@ -4,34 +4,34 @@
     <h1><%= @list.name %></h1>
   </div>
 
-  <h2 class="header" style="border: none; font-size: 20px;">ITENS:</h2>
+  <h2 class="header" style="border: none; font-size: 20px;">ITEMS:</h2>
   <ul class="scrollable-list" style="max-height: 200px;">
     <% if @list.items.any? %>
       <% @list.items.reverse.each do |item| %>
         <li>
-          <%= item.title %> - <%= item.completed ? "Concluído ✅" : "Pendente ⏳" %>
+          <%= item.title %> - <%= item.completed ? "Completed ✅" : "Pending ⏳" %>
         </li>
       <% end %>
     <% else %>
-      <p> A lista está vazia</p>
+      <p> The list is empty</p>
     <% end %>
   </ul>
 
-  <h2 class="header" style="border: none; font-size: 20px;">Adicionar Item</h2>
+  <h2 class="header" style="border: none; font-size: 20px;">Add Item</h2>
   <%= form_with model: [@list, @item], local: true, html: { onsubmit: "return validateForm(this);" } do |form| %>
-    <%= form.label :title, "Título: " %>
+    <%= form.label :title, "Title: " %>
     <%= form.text_field :title, class: "text-field" %>
     <%= button_tag(type: 'submit', class: "button") do %>
-      <%= image_tag('pen.svg', alt: 'Adicionar', width: '20', height: '20') %>
-      Adicionar
+      <%= image_tag('pen.svg', alt: 'Insert', width: '20', height: '20') %>
+      Insert
     <% end %>
   <% end %>
 
   <div id="error-message" style="color: red; display: none;">
-    O título do item não pode estar vazio!
+    The item title cannot be empty!
   </div>
 
-  <%= link_to "#{image_tag('voltar.png', alt: 'Voltar', width: '20', height: '20')} Voltar".html_safe, lists_path, class: "button link", style: "margin-top: 20px;" %>
+  <%= link_to "#{image_tag('voltar.png', alt: 'Voltar', width: '20', height: '20')} Back".html_safe, lists_path, class: "button link", style: "margin-top: 20px;" %>
 
   <footer>
     <span class="bottom-right-text ">4</span>
