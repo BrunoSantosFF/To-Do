@@ -1,7 +1,8 @@
 <div class="container_main">
 
   <div class="header">
-    <h1>To Do List</h1>
+    <h1>To Do List <%= link_to '🙋🏻‍♂️', edit_user_registration_path, class: "user_edit" %></h1>
+    
   </div>
 
 
@@ -25,14 +26,11 @@
 
   <%= link_to "#{image_tag('pen.svg', alt: 'Insert List',width: '20', height: '20')} Insert List".html_safe, new_list_path,class: "button button_create link" %>
 
-  <% if user_signed_in? %>
-   <%= link_to "Log out", destroy_user_session_path, data: { "turbo-method": :delete } %>
-  <% end %>
   
   <footer>
     <span class="bottom-right-text ">1</span>
   </footer>
 
-  <%= link_to 'Editar Conta', edit_user_registration_path %>
+  
 
 </div>
