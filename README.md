@@ -90,3 +90,8 @@ Agora voce podera ver algumas telas que foram desenvolvidas ao longo do projeto
     <figcaption style="text-align: center;">Edit List</figcaption>
 </figure>
 
+<p align="center">
+  <img src="/images/editar_lista.png" alt="Descrição da imagem" width="300"/>
+  <br>
+  <em>Legenda da imagem</em>
+</p>
