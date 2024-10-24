@@ -1,5 +1,18 @@
 # TO DO LIST
 
+
+## Sumário
+1. [Introdução](#introdução)
+2. [Criar o ambiente em Ruby on Rails](#criar-o-ambiente-em-ruby-on-rails)
+3. [Criando os modelos (List e Item)](#criando-os-modelos-list-e-item)
+4. [Criando os controllers e as views](#criando-os-controllers-e-as-views)
+5. [Autenticação e Usuário](#autenticação-e-usuário)
+6. [Telas](#telas)
+7. [Executar](#executar)
+8. [Agradecimento](#agradecimento)
+
+## Introdução
+
 Este projeto é uma aplicação de lista de tarefas (to-do list) desenvolvida em Ruby on Rails, com autenticação de usuários via Devise. Cada usuário pode criar, editar e gerenciar sua própria lista de tarefas de forma privada, acessível apenas após o login. O sistema garante que apenas usuários autenticados possam visualizar e manipular suas respectivas listas.
 
 ## Criar o ambiente em Ruby on Rails
@@ -22,13 +35,13 @@ Criação do modelo **List** (lista de tarefas) e **Item** (item dentro de uma l
 rails g model List name:string && rails g model Item title:string completed:boolean list:references
 ```
 
-## Criando os controllers e os views
+## Criando os controllers e as views
 Criação dos controllers List e Item:
 ```
 rails g controller Lists index show new create edit update destroy && rails g controller Items create update destroy
 ```
 
-# Autentificação e Usuário
+# Autenticação e Usuário
 
 Fazendo uma tela para usuarios com autitificação (Devise)
 
@@ -64,7 +77,7 @@ rails generate devise:views
 
 ## Telas
 
-Agora voce podera ver algumas telas que foram desenvolvidas ao longo do projeto
+Agora você podera ver algumas telas que foram desenvolvidas ao longo do projeto
 
 *Tela de login:*
 <p align="center">
@@ -95,3 +108,28 @@ Agora voce podera ver algumas telas que foram desenvolvidas ao longo do projeto
   <br>
   <em>Edit List</em>
 </p>
+
+
+## Executar
+
+Para executar o programa digite o seguinte comando: 
+
+```
+rails s
+```
+
+E para conseguir visualizar, digite no seu navegador: 
+
+```
+http://localhost:3000/
+```
+
+Caso queira ver todas as rotas do site: 
+
+```
+http://localhost:3000/rails/info/routes
+```
+
+## Observação 
+
+Esse código foi criado com o objetivo de testar a tecnologia Ruby e o framework Rails de forma simples. Provavelmente existe uma maneira mais otimizada de fazer isso, mas o fiz pensando em quem está aprendendo, assim como eu, rsrs. **Leiam a documentação do Rails 7, ajuda bastante!**

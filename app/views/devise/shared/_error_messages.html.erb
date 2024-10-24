@@ -16,13 +16,12 @@
   </div>
 
   <script>
-    // Aguarda 3 segundos e então remove o container
     setTimeout(function() {
       var errorContainer = document.getElementById("error_messages_container");
       if (errorContainer) {
         errorContainer.remove();
       }
-    }, 3000); // Tempo para aguardar antes da remoção (3000ms = 3 segundos)
+    }, 3000); 
   </script>
 
 <% end %>
