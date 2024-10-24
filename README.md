@@ -68,7 +68,7 @@ Agora voce podera ver algumas telas que foram desenvolvidas ao longo do projeto
 
 *Tela de login:*
 <p align="center">
-  <img src="/images/login.png" alt="login" width="50%"/>
+  <img src="/images/login.png" alt="login" width="300"/>
   <br>
   <em>Log in</em>
 </p>
@@ -76,14 +76,14 @@ Agora voce podera ver algumas telas que foram desenvolvidas ao longo do projeto
 
 *Tela de Usuário:*
 <p align="center">
-  <img src="/images/usuario.png" alt="usuario" width="50%"/>
+  <img src="/images/usuario.png" alt="usuario" width="300"/>
   <br>
   <em>User</em>
 </p>
 
 *Tela de Listas:*
 <p align="center">
-  <img src="/images/listas.png" alt="listas" width="50%"/>
+  <img src="/images/listas.png" alt="listas" width="300"/>
   <br>
   <em>List</em>
 </p>
