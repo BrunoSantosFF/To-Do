@@ -68,7 +68,8 @@ Agora voce podera ver algumas telas que foram desenvolvidas ao longo do projeto
 
 *Tela de login:*
 
-<figure>
-    <img src="/images/login.png" alt="login" style="width: 50%;"/>
-    <figcaption>Log in</figcaption>
+
+<figure style="text-align: center;">
+    <img src="/images/login.png" alt="login" style="width: 50%; height: 50%;"/>
+    <figcaption style="text-align: center;">Log in</figcaption>
 </figure>
