@@ -1,5 +1,7 @@
 # TO DO LIST
 
+Este projeto é uma aplicação de lista de tarefas (to-do list) desenvolvida em Ruby on Rails, com autenticação de usuários via Devise. Cada usuário pode criar, editar e gerenciar sua própria lista de tarefas de forma privada, acessível apenas após o login. O sistema garante que apenas usuários autenticados possam visualizar e manipular suas respectivas listas.
+
 ## Criar o ambiente em Ruby on Rails
 Crie um novo projeto Rails:
 ```
@@ -26,7 +28,6 @@ Criação dos controllers List e Item:
 rails g controller Lists index show new create edit update destroy && rails g controller Items create update destroy
 ```
 
-//=================================
 # Autentificação e Usuário
 
 Fazendo uma tela para usuarios com autitificação (Devise)
@@ -60,3 +61,14 @@ Criando as views do Usuário:
 rails generate devise:views
 
 ```
+
+## Telas
+
+Agora voce podera ver algumas telas que foram desenvolvidas ao longo do projeto
+
+*Tela de login:*
+
+<figure>
+    <img src="/images/login.png" alt="login" style="width: 50%;"/>
+    <figcaption>Log in</figcaption>
+</figure>
