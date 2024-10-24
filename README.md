@@ -67,31 +67,31 @@ rails generate devise:views
 Agora voce podera ver algumas telas que foram desenvolvidas ao longo do projeto
 
 *Tela de login:*
-<figure style="text-align: center;">
-    <img src="/images/login.png" alt="login" style="width: 50%; height: 50%;"/>
-    <figcaption style="text-align: center;">Log in</figcaption>
-</figure>
+<p align="center">
+  <img src="/images/login.png" alt="login" width="50%"/>
+  <br>
+  <em>Log in</em>
+</p>
+
 
 *Tela de Usuário:*
-<figure style="text-align: center;">
-    <img src="/images/usuario.png" alt="usuario" style="width: 50%; height: 50%;"/>
-    <figcaption style="text-align: center;">User</figcaption>
-</figure>
+<p align="center">
+  <img src="/images/usuario.png" alt="usuario" width="50%"/>
+  <br>
+  <em>User</em>
+</p>
 
 *Tela de Listas:*
-<figure style="text-align: center;">
-    <img src="/images/listas.png" alt="listas" style="width: 50%; height: 50%;"/>
-    <figcaption style="text-align: center;">List</figcaption>
-</figure>
+<p align="center">
+  <img src="/images/listas.png" alt="listas" width="50%"/>
+  <br>
+  <em>List</em>
+</p>
 
 *Tela de Editar Lista:*
-<figure style="text-align: center;">
-    <img src="/images/editar_lista.png" alt="editar lista" style="width: 50%; height: 50%;"/>
-    <figcaption style="text-align: center;">Edit List</figcaption>
-</figure>
 
 <p align="center">
-  <img src="/images/editar_lista.png" alt="Descrição da imagem" width="300"/>
+  <img src="/images/editar_lista.png" alt="editar lista" width="300"/>
   <br>
-  <em>Legenda da imagem</em>
+  <em>Edit List</em>
 </p>
