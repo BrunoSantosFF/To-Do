@@ -67,9 +67,26 @@ rails generate devise:views
 Agora voce podera ver algumas telas que foram desenvolvidas ao longo do projeto
 
 *Tela de login:*
-
-
 <figure style="text-align: center;">
     <img src="/images/login.png" alt="login" style="width: 50%; height: 50%;"/>
     <figcaption style="text-align: center;">Log in</figcaption>
 </figure>
+
+*Tela de Usuário:*
+<figure style="text-align: center;">
+    <img src="/images/usuario.png" alt="usuario" style="width: 50%; height: 50%;"/>
+    <figcaption style="text-align: center;">User</figcaption>
+</figure>
+
+*Tela de Listas:*
+<figure style="text-align: center;">
+    <img src="/images/listas.png" alt="listas" style="width: 50%; height: 50%;"/>
+    <figcaption style="text-align: center;">List</figcaption>
+</figure>
+
+*Tela de Editar Lista:*
+<figure style="text-align: center;">
+    <img src="/images/editar_lista.png" alt="editar lista" style="width: 50%; height: 50%;"/>
+    <figcaption style="text-align: center;">Edit List</figcaption>
+</figure>
+
