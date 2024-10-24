@@ -39,3 +39,38 @@
 .custom-button:hover {
   background: rgb(214, 194, 194);
 }
+#error_messages_container {
+  background-color: #f8d7da; 
+  color: #721c24;            
+  border: 1px solid #f5c6cb; 
+  padding: 15px;              
+  margin-bottom: 20px;        
+  border-radius: 5px;         
+  font-size: 14px;            
+
+  position: absolute;         
+  left: 50%;                  
+  transform: translateX(-50%); 
+  z-index: 1000;              
+  width: 80%;                 
+  max-width: 500px;           
+  text-align: center;         
+
+  /* Animação para desaparecer após 3 segundos */
+  animation: fadeOut 2s ease 2s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }    /* Elemento visível */
+  100% { opacity: 0; }  /* Fica invisível no final da animação */
+}
+
+#error_messages_container h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #721c24;
+}
+
+#error_messages_container li {
+  color: black;
+}
